@@ -1,19 +1,25 @@
-CC=gcc
-CFLAGS=-Wall -g
+# Makefile for Simple File System
 
-all: diskinfo disklist diskget diskput
+CC = gcc
+CFLAGS = -Wall -Wextra -g
+TARGET = diskinfo
 
-diskinfo: diskinfo.c fs_utils.c
-	$(CC) $(CFLAGS) -o diskinfo diskinfo.c fs_utils.c
+# Source files
+SRCS = diskinfo.c fs_utils.c
+OBJS = $(SRCS:.c=.o)
 
-disklist: disklist.c fs_utils.c
-	$(CC) $(CFLAGS) -o disklist disklist.c fs_utils.c
+all: $(TARGET)
 
-diskget: diskget.c fs_utils.c
-	$(CC) $(CFLAGS) -o diskget diskget.c fs_utils.c
+# Compile target
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS)
 
-diskput: diskput.c fs_utils.c
-	$(CC) $(CFLAGS) -o diskput diskput.c fs_utils.c
+# Compile .c to .o
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
+# Clean up object files and executable
 clean:
-	rm -f diskinfo disklist diskget diskput *.o
+	rm -f $(OBJS) $(TARGET)
+
+.PHONY: all clean
