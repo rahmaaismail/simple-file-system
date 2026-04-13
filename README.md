@@ -1,5 +1,4 @@
 # Simple File System (SFS) – FAT12  
-**CSc 360: Operating Systems (Spring 2026)**  
 
 SFS is a file system utility suite written in C for CSC 360 – Operating Systems at the University of Victoria. The goal of this assignment is to practice low-level systems programming, binary file parsing, file system design concepts, and manipulation of FAT12 structures.
 
