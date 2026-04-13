@@ -46,7 +46,6 @@ make
 
 ## Sample Commands
 
-Example Commands:
     ./diskinfo disk.IMA # display info about the disk
 
     ./disklist disk.IMA # list files and directories
