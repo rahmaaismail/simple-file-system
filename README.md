@@ -17,7 +17,7 @@ The project consists of four utilities:
 - `diskget` – Extracts files from the disk image  
 - `diskput` – Inserts files into the disk image  
 
-These tools operate directly on a FAT12 disk image (e.g., `disk.IMA`) by reading and modifying its binary structure.
+These tools operate directly on a FAT12 disk image (e.g., `disk.IMA`) by reading and modifying its binary structure. A sample file ANS1.pdf can be used to test.
 
 ---
 
