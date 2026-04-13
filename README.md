@@ -43,7 +43,6 @@ These tools operate directly on a FAT12 disk image (e.g., `disk.IMA`) by reading
 
 To build all executables, run:
 
-```bash
 make
 
 ## Notes
