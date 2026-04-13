@@ -17,7 +17,7 @@ The project consists of four utilities:
 - `diskget` – Extracts files from the disk image  
 - `diskput` – Inserts files into the disk image  
 
-These tools operate directly on a FAT12 disk image (e.g., `disk.IMA`) by reading and modifying its binary structure. A sample file ANS1.pdf can be used to test.
+These tools operate directly on a FAT12 disk image (e.g., `disk.IMA`) by reading and modifying its binary structure.
 
 ---
 
@@ -43,6 +43,23 @@ These tools operate directly on a FAT12 disk image (e.g., `disk.IMA`) by reading
 To build all executables, run:
 
 make
+
+## Sample Commands
+
+Example Commands:
+    ./diskinfo disk.IMA # display info about the disk
+
+    ./disklist disk.IMA # list files and directories
+
+    ./diskget disk.IMA ANS1.PDF # copy a file from disk to local machine
+
+    ./diskput testNew.IMA SUB1/foo.txt # copy a local file into the disk: subdirectory SUB1
+    or 
+    ./diskput testNew.IMA foo.txt # copy a local file into the disk: root directory
+
+    Note: Before using diskput, make sure the local file exists. For example:
+    touch foo.txt
+    echo "Hello, world!" > foo.txt
 
 ## Notes
 
